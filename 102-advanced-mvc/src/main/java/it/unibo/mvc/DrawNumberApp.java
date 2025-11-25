@@ -24,11 +24,12 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
             view.setObserver(this);
             view.start();
         }
-        Settings settings = new Settings();
+
+        final Settings settings = new Settings();
         try {
-            settings.SetSetting();
-        } catch (IOException e) {
-            e.printStackTrace();
+            settings.setSetting();
+        } catch (final IOException e) {
+            settings.setDefault();
         }
         this.model = new DrawNumberImpl(settings.getMin(), settings.getMax(), settings.getAttempts());
     }
@@ -40,7 +41,7 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
             for (final DrawNumberView view: views) {
                 view.result(result);
             }
-        } catch (IllegalArgumentException e) {
+        } catch (final IllegalArgumentException e) {
             for (final DrawNumberView view: views) {
                 view.numberIncorrect();
             }
@@ -64,12 +65,20 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
     }
 
     /**
-     * @param args
+     * Main.
+     * 
+     * @param args args.
      *            ignored
      * @throws FileNotFoundException 
      */
     public static void main(final String... args) throws FileNotFoundException {
-        new DrawNumberApp(new DrawNumberViewImpl());
+        new DrawNumberApp(
+            new DrawNumberViewImpl(), 
+            new DrawNumberViewImpl(), 
+            new PrintStreamView(System.out), 
+            new PrintStreamView("text.txt")
+        );
+        //new DrawNumberApp(new DrawNumberViewImpl());
     }
 
 }

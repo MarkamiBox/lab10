@@ -10,21 +10,23 @@ public final class Settings{
     private int max = 0; 
     private int min = 0;
     private int attempts  = 0;
-    private static final String PATH = "config.yml";
+    private static final String FILE = "config.yml";
 
     /**
      * Set the settings getting the info by the path file
      * @return nothing
      * @throws IOException 
     */
-    public void SetSetting() throws IOException{
-        final InputStream stream = ClassLoader.getSystemResourceAsStream(PATH);
+    public void setSetting() throws IOException {
+        final InputStream stream = ClassLoader.getSystemResourceAsStream(FILE);
+        if(stream == null){
+            setDefault();
+            return;
+        }
         String line;
-
         BufferedReader br = new BufferedReader(new InputStreamReader(stream));
         while ((line = br.readLine()) != null) {
             final StringTokenizer st = new StringTokenizer(line, ":");
-
             if(st.countTokens() >= 2){
                 final String firstToken = st.nextToken().trim();
                 final String SecondToken = st.nextToken().trim();
@@ -46,6 +48,12 @@ public final class Settings{
                 }
             }
         }
+    }
+
+    public void setDefault(){
+        this.min = 10;
+        this.max = 60;
+        this.attempts = 1;
     }
 
     /**

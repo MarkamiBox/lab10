@@ -1,11 +1,9 @@
 package it.unibo.mvc;
 
-
 /**
- * Encapsulates the concept of configuration.
+ * Configuration.
  */
 public final class Configuration {
-
     private final int max; 
     private final int min;
     private final int attempts;
@@ -17,6 +15,8 @@ public final class Configuration {
     }
 
     /**
+     * Get Max.
+     * 
      * @return the maximum value
      */
     public int getMax() {
@@ -24,6 +24,8 @@ public final class Configuration {
     }
 
     /**
+     * Get Min.
+     * 
      * @return the minimum value
      */
     public int getMin() {
@@ -31,6 +33,8 @@ public final class Configuration {
     }
 
     /**
+     * Get Attempts.
+     * 
      * @return the number of attempts
      */
     public int getAttempts() {
@@ -38,6 +42,8 @@ public final class Configuration {
     }
 
     /**
+     * Consistent.
+     * 
      * @return true if the configuration is consistent
      */
     public boolean isConsistent() {
@@ -46,20 +52,16 @@ public final class Configuration {
 
     /**
      * Pattern builder: used here because:
-     * 
      * - all the parameters of the Configuration class have a default value, which
      * means that we would like to have all the possible combinations of
      * constructors (one with three parameters, three with two parameters, three
      * with a single parameter), which are way too many and confusing to use
-     * 
      * - moreover, it would be impossible to provide all of them, because they are
      * all of the same type, and only a single constructor can exist with a given
      * list of parameter types.
-     * 
      * - the Configuration class has three parameters of the same type, and it is
      * unclear to understand, in a call to its contructor, which is which. By using
      * the builder, we emulate the so-called "named arguments".
-     * 
      */
     public static class Builder {
 
@@ -73,7 +75,10 @@ public final class Configuration {
         private boolean consumed = false;
 
         /**
+         * set Min.
+         * 
          * @param min the minimum value
+         * 
          * @return this builder, for method chaining
          */
         public Builder setMin(final int min) {
@@ -82,7 +87,10 @@ public final class Configuration {
         }
 
         /**
+         * set Max.
+         * 
          * @param max the maximum value
+         * 
          * @return this builder, for method chaining
          */
         public Builder setMax(final int max) {
@@ -91,7 +99,10 @@ public final class Configuration {
         }
 
         /**
+         * set Attemps.
+         * 
          * @param attempts the attempts count
+         * 
          * @return this builder, for method chaining
          */
         public Builder setAttempts(final int attempts) {
@@ -100,6 +111,8 @@ public final class Configuration {
         }
 
         /**
+         * Build.
+         * 
          * @return a configuration
          */
         public final Configuration build() {

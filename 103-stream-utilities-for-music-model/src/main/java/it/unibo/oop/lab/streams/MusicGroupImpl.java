@@ -31,7 +31,7 @@ public final class MusicGroupImpl implements MusicGroup {
 
     @Override
     public Stream<String> orderedSongNames() {
-        return null;
+        return this.songs.stream().forEachOrdered(a);
     }
 
     @Override
