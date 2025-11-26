@@ -1,68 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="12.1.2">
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\Configuration.java">
-<error line="75" column="25" severity="error" message="Variable &apos;consumed&apos; explicitly initialized to &apos;false&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
-<error line="84" column="41" severity="error" message="&apos;min&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="96" column="41" severity="error" message="&apos;max&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="108" column="46" severity="error" message="&apos;attempts&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\Configuration.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumber.java">
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumber.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberApp.java">
-<error line="72" severity="error" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberApp.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberImpl.java">
-<error line="17" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
-<error line="23" column="8" severity="error" message="Unused @param tag for &apos;attemps&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="27" column="67" severity="error" message="Expected @param tag for &apos;attempts&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberImpl.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberView.java">
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberView.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberViewImpl.java">
-<error line="51" column="48" severity="error" message="Variable &apos;exception&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="122" column="30" severity="error" message="Parameter message should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="122" column="37" severity="error" message="Variable &apos;message&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberViewImpl.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberViewObserver.java">
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawNumberViewObserver.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawResult.java">
-<error line="5" column="4" severity="error" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\DrawResult.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\PrintStreamView.java">
-<error line="4" column="1" severity="error" message="&apos;package&apos; should be separated from previous line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="31" severity="error" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
-<error line="62" column="30" severity="error" message="Parameter message should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="62" column="37" severity="error" message="Variable &apos;message&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\PrintStreamView.java">
 </file>
-<file name="C:\Users\salvatore.novelli\Desktop\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\Settings.java">
-<error line="9" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
-<error line="9" column="28" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="10" column="17" severity="error" message="Variable &apos;max&apos; explicitly initialized to &apos;0&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
-<error line="11" column="17" severity="error" message="Variable &apos;min&apos; explicitly initialized to &apos;0&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
-<error line="12" column="17" severity="error" message="Variable &apos;attempts&apos; explicitly initialized to &apos;0&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
-<error line="12" column="27" severity="error" message="Use a single space to separate non-whitespace characters." source="com.puppycrawl.tools.checkstyle.checks.whitespace.SingleSpaceSeparatorCheck"/>
-<error line="13" column="5" severity="error" message="Static variable definition in wrong order." source="com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck"/>
-<error line="15" severity="error" message="First sentence should end with a period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
-<error line="17" severity="error" message="Unused Javadoc tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="17" severity="error" message="Javadoc tag &apos;@return&apos; should be preceded with an empty line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.RequireEmptyLineBeforeBlockTagGroupCheck"/>
-<error line="18" severity="error" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
-<error line="19" column="5" severity="error" message="Leading asterisk has incorrect indentation level 5, expected is 6." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocLeadingAsteriskAlignCheck"/>
-<error line="22" column="9" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
-<error line="22" column="9" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="22" column="27" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="27" column="24" severity="error" message="Variable &apos;br&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="30" column="13" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
-<error line="30" column="13" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="30" column="38" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="32" column="30" severity="error" message="Name &apos;SecondToken&apos; must match pattern &apos;^([a-z][a-zA-Z0-9]*|_)$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck"/>
-<error line="53" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
-<error line="53" column="29" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="55" column="20" severity="error" message="&apos;60&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="59" severity="error" message="First sentence should end with a period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
-<error line="64" column="24" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="68" severity="error" message="First sentence should end with a period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
-<error line="73" column="24" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="77" severity="error" message="First sentence should end with a period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
-<error line="82" column="29" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<file name="C:\Users\Salvatore\Desktop\Java\lab10\102-advanced-mvc\src\main\java\it\unibo\mvc\Settings.java">
 </file>
 </checkstyle>

@@ -15,12 +15,11 @@ public final class DrawNumberImpl implements DrawNumber {
     private final Random random = new Random();
 
     /**
+     * DrawNumberImpl.
      * 
      * @param min min.
-     * 
      * @param max max.
-     * 
-     * @param attemps attemps.
+     * @param attempts attemps.
      *
      * @throws IllegalStateException if the configuration is not consistent
      */

@@ -4,82 +4,93 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.StringTokenizer;
 
-public final class Settings{
-    private int max = 0; 
-    private int min = 0;
-    private int attempts  = 0;
+/**
+ * Settings.
+ */
+public final class Settings {
     private static final String FILE = "config.yml";
+    private static final int DEFAULT_MIN = 10;
+    private static final int DEFAULT_MAX = 60;
+    private static final int DEFAULT_ATTEMPS = 1;
+    private int max; 
+    private int min;
+    private int attempts;
 
     /**
-     * Set the settings getting the info by the path file
-     * @return nothing
-     * @throws IOException 
-    */
+     * Set the settings getting the info by the path file.
+     * 
+     * @throws IOException expception
+     */
     public void setSetting() throws IOException {
         final InputStream stream = ClassLoader.getSystemResourceAsStream(FILE);
-        if(stream == null){
+        if (stream == null) {
             setDefault();
             return;
         }
-        String line;
-        BufferedReader br = new BufferedReader(new InputStreamReader(stream));
-        while ((line = br.readLine()) != null) {
-            final StringTokenizer st = new StringTokenizer(line, ":");
-            if(st.countTokens() >= 2){
-                final String firstToken = st.nextToken().trim();
-                final String SecondToken = st.nextToken().trim();
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))) {
+            String line = br.readLine();
+            while (line != null) {
+                final StringTokenizer st = new StringTokenizer(line, ":");
+                if (st.countTokens() >= 2) {
+                    final String keyToken = st.nextToken().trim();
+                    final String valueToken = st.nextToken().trim();
+                    final int value = Integer.parseInt(valueToken);
 
-                final int value = Integer.parseInt(SecondToken);
-
-                switch (firstToken) {
-                    case "minimum":
-                        this.min = value;
-                        break;
-                    case "maximum":
-                        this.max = value;
-                        break;
-                    case "attempts":
-                        this.attempts = value;
-                        break;
-                    default:
-                        break;
+                    switch (keyToken) {
+                        case "minimum":
+                            this.min = value;
+                            break;
+                        case "maximum":
+                            this.max = value;
+                            break;
+                        case "attempts":
+                            this.attempts = value;
+                            break;
+                        default:
+                            break;
+                    }
                 }
+                line = br.readLine();
             }
         }
     }
 
-    public void setDefault(){
-        this.min = 10;
-        this.max = 60;
-        this.attempts = 1;
+    /**
+     * Sets default values.
+     */
+    public void setDefault() {
+        this.min = DEFAULT_MIN;
+        this.max = DEFAULT_MAX;
+        this.attempts = DEFAULT_ATTEMPS;
     }
 
     /**
-     * Get the max
+     * Get the max.
      * 
      * @return max
      */
-    public int getMax(){
+    public int getMax() {
         return this.max;
     }
 
     /**
-     * Get the min
+     * Get the min.
      * 
      * @return min
      */
-    public int getMin(){
+    public int getMin() {
         return this.min;
     }
 
     /**
-     * Get the attempts
+     * Get the attempts.
      * 
      * @return attempts
      */
-    public int getAttempts(){
+    public int getAttempts() {
         return this.attempts;
     }
 }

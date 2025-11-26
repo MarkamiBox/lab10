@@ -72,41 +72,41 @@ public final class Configuration {
         private int min = MIN;
         private int max = MAX;
         private int attempts = ATTEMPTS;
-        private boolean consumed = false;
+        private boolean consumed;
 
         /**
          * set Min.
          * 
-         * @param min the minimum value
+         * @param minVal the minimum value
          * 
          * @return this builder, for method chaining
          */
-        public Builder setMin(final int min) {
-            this.min = min;
+        public Builder setMin(final int minVal) {
+            this.min = minVal;
             return this;
         }
 
         /**
          * set Max.
          * 
-         * @param max the maximum value
+         * @param maxVal the maximum value
          * 
          * @return this builder, for method chaining
          */
-        public Builder setMax(final int max) {
-            this.max = max;
+        public Builder setMax(final int maxVal) {
+            this.max = maxVal;
             return this;
         }
 
         /**
          * set Attemps.
          * 
-         * @param attempts the attempts count
+         * @param attemptsVal the attempts count
          * 
          * @return this builder, for method chaining
          */
-        public Builder setAttempts(final int attempts) {
-            this.attempts = attempts;
+        public Builder setAttempts(final int attemptsVal) {
+            this.attempts = attemptsVal;
             return this;
         }
 

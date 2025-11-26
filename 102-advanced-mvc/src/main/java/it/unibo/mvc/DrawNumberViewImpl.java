@@ -26,7 +26,7 @@ public final class DrawNumberViewImpl implements DrawNumberView {
     private final JFrame frame = new JFrame(FRAME_NAME);
 
     /**
-     * 
+     * DrawsImplView.
      */
     public DrawNumberViewImpl() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,7 +48,7 @@ public final class DrawNumberViewImpl implements DrawNumberView {
             public void actionPerformed(final ActionEvent e) {
                 try {
                     observer.newAttempt(Integer.parseInt(tNumber.getText()));
-                } catch (NumberFormatException exception) {
+                } catch (final NumberFormatException exception) {
                     JOptionPane.showMessageDialog(frame, "An integer please..");
                 }
             }
@@ -108,8 +108,6 @@ public final class DrawNumberViewImpl implements DrawNumberView {
         case YOU_LOST:
             JOptionPane.showMessageDialog(frame, res.getDescription() + NEW_GAME, "Lost", JOptionPane.WARNING_MESSAGE);
             break;
-        default:
-            throw new IllegalStateException("Unexpected result: " + res);
         }
         observer.resetGame();
     }
@@ -119,7 +117,7 @@ public final class DrawNumberViewImpl implements DrawNumberView {
     }
 
     @Override
-    public void displayError(String message) {
+    public void displayError(final String message) {
         JOptionPane.showMessageDialog(frame, message);
     }
 }

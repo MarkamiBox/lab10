@@ -2,6 +2,7 @@ package it.unibo.mvc;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -61,7 +62,7 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
          * should be paid to alive threads, as the application would continue to persist
          * until the last thread terminates.
          */
-        System.exit(0);
+        //System.exit(0);
     }
 
     /**
@@ -69,9 +70,10 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
      * 
      * @param args args.
      *            ignored
-     * @throws FileNotFoundException 
+     * @throws FileNotFoundException error
+     * @throws UnsupportedEncodingException error
      */
-    public static void main(final String... args) throws FileNotFoundException {
+    public static void main(final String... args) throws FileNotFoundException, UnsupportedEncodingException {
         new DrawNumberApp(
             new DrawNumberViewImpl(), 
             new DrawNumberViewImpl(), 
